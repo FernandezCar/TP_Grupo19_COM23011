@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,45 +10,131 @@
     <link rel="icon" href="imagenes/favicon_2.ico">
 
 </head>
+
 <body>
+
     <header>
-        
-        <nav>
-            <a href="#Inicio">Inicio |</a>
-            <a href=""></a>
-            <a href="#Multimedia">Multimedia |</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
-        
+        <div class="contenedor" id="inicio">
+            <h1><a href="index.html">CodoACodo con las Mascotas</a></h1>
+
+            <input type="checkbox" id="menu-check">
+            <label id="menu" for="menu-check">
+                <span id="menu-abrir">&#9776;</span>
+                <span id="menu-cerrar">X</span>
+            </label>
+
+            <nav>
+                <ul>
+                    <li><a href="#inicio" class="actual">Inicio</a></li>
+                    <li><a href="#perros">Perros</a></li>
+                    <li><a href="#gatos">Gatos</a></li>
+                </ul>
+
+                <ul>
+                    <li><a href="#comunidad">Comunidad</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-<!-- FIN HEADER-->
-<main>
+    <!-- FIN HEADER-->
+    <main>
+
+        <!-- <section id="inicio"> -->
+
+            <p>¡Bienvenido a nuestra página web de mascotas!
+                Aquí podrás encontrar información útil y entretenida acerca de todo
+                lo relacionado con el mundo animal y en especial, con tus amigos peludos.
+                Si eres un amante de los animales, estás en el lugar indicado.
+            </p>
+
+            
+            <div class="carrousel">
+                <div class="carrousel_interno">
+                    <img src="imagenes/carrousel/carrousel-01.jpg" alt="" class="img">
+                    <img src="imagenes/carrousel/carrousel-02.jpg" alt="" class="img">
+                    <img src="imagenes/carrousel/carrousel-03.jpg" alt="" class="img">
+                    <img src="imagenes/carrousel/carrousel-04.jpg" alt="" class="img">
+                    <img src="imagenes/carrousel/carrousel-05.jpg" alt="" class="img">
+                    <img src="imagenes/carrousel/carrousel-06.jpg" alt="" class="img">
+                </div>
+
+                <ul class="puntos">
+                    <li class="punto activo"></li>
+                    <li class="punto"></li>
+                    <li class="punto"></li>
+                    <li class="punto"></li>
+                    <li class="punto"></li>
+                    <li class="punto"></li>
+                </ul>
+
+            </div>
+
+        <!-- Fin Section inicio -->
+
+
+
+        
+    </main>
+    <!-- FIN MAIN -->
     
-    <section id="Inicio">
+    <aside d="perros">
 
-    </section>
-    <!-- Fin Section 1 -->
-    <section>
+        <ul>
+            <li>
+                <img src="imagenes/perros/mestizo.jpg" alt="Mastizo">
+                
+                <blockquote> los perros mestizos pueden ser buenos compañeros y mascotas. 
+                    De hecho, muchas personas prefieren adoptar perros mestizos 
+                    en lugar de perros de raza pura, ya que suelen ser más saludables y 
+                    menos propensos a ciertas enfermedades genéticas que son comunes en 
+                    las razas puras. Además, los perros mestizos tienen una amplia 
+                    variedad de características físicas y de temperamento, 
+                    lo que significa que puedes encontrar un perro mestizo que se adapte 
+                    a tu estilo de vida y a tus necesidades específicas </blockquote>
+                <cite> Mestizo </cite>
+            </li>
+            <li>
+                <img src="imagenes/perros/caniche.jpg" alt="Caniche">
+                
+                <blockquote> El Caniche es una raza de perro de compañía que se caracteriza 
+                    por ser inteligente, vivaz y afectuoso. Estos perros son muy leales y se 
+                    adaptan bien a cualquier tipo de hogar, ya sea un apartamento pequeño o 
+                    una casa grande con un patio. Suelen ser activos y enérgicos, sociables y 
+                    protectores </blockquote>
+                <cite> Caniche </cite>
+            </li>
+            <li>
+                <img src="imagenes/perros/labrador.jpg" alt="Labrador">
+                
+                <blockquote> El Labrador es un perro muy amistoso, inteligente y enérgico 
+                    que puede ser una excelente opción como mascota para muchas personas y hogares. 
+                    Son muy pacientes y entusiastas, es necesario el ejercicio diario para que gasten 
+                    energía y se mantengan saludables. </blockquote>
+                <cite> Labrador </cite>
+            </li>
+        </ul>
+    </aside>
+        <!-- Fin Section perros -->
 
-    </section>
-    <!-- Fin Section 2 -->
-    <section>
-
-    </section id="Multimedia">
-    <!-- Fin Section 3 -->
-    <section>
-
-    </section>
-    <!-- Fin Section 4 -->
 
 
-</main>
-<!-- FIN MAIN -->
+        <section id="gatos">
 
-<footer>
-    
-</footer>
-<!-- FIN FOOTER -->
+        </section>
+        <!-- Fin Section gatos -->
 
+
+        <section id="comunidad">
+
+        </section>
+        <!-- Fin Section comunidad -->
+    <footer>
+
+    </footer>
+    <!-- FIN FOOTER -->
+
+    <script src="js/script.js"></script>
 </body>
+
 </html>

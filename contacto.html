@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estilo-form.css">
     <link rel="icon" href="imagenes/favicon_2.ico">
 
 </head>
@@ -14,6 +14,7 @@
         
         <nav>
             <a href="index.html">Inicio |</a>
+            <a href="comunidad.html">Comunidad |</a>
             <a href="contacto.html">Contacto</a>
         </nav>
         
@@ -22,32 +23,74 @@
 
     <main>
         <h1>Formulario de Contacto</h1>
-        <form action="">
-            <fieldset>
-                <legend>Datos Personales</legend>
 
-                <label for="nombre">Nombre: </label>
-                <input type="text" name="nombre" id="nombre">
-                
-                <label for="apellido">Apellido: </label>
-                <input type="text" name="apeliido" id="apellido">
-                <br>
-                <label for="fecha">Fecha de Nacimiento: </label>
-                <input type="date" min="1923-01-01" max="2024-01-01">
-                <br>
-                <label for="email">Correo: </label>
-                <input type="email" name="email" id="email">
-            </fieldset>
+        <form action="" class="formulario" id="formulario">
+            <!-- Grupo: Nombre -->
+            <div class="form__grupo" id="form_nombre">
+                <label for="nombre" class="form__label">Nombre</label>
+                <div class="form__grupo-input">
+                    <input type="text" class="form__input" name="nombre" id="nombre" placeholder="Muddy">
+                    <i class="form__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="form__input-error">El nombre debe contener hasta 20 letras, sin números o símbolos.</p>
+            </div>
 
-            <br><br>
+            <!-- Grupo: Apellido -->
+            <div class="form__grupo" id="form_apellido">
+                <label for="apellido" class="form__label">Apellido</label>
+                <div class="form__grupo-input">
+                    <input type="text" class="form__input" name="apellido" id="apellido" placeholder="Waters">
+                    <i class="form__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="form__input-error">El Apellido debe contener hasta 20 letras, sin números o símbolos.</p>
+            </div>
 
-            <label for="comentarios">Deje sus comentarios</label><br>
-            <textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea>
+            <!-- Grupo: Edad -->
+            <div class="form__grupo" id="form_edad">
+                <label for="edad" class="form__label">Edad</label>
+                <div class="form__grupo-input">
+                    <input type="number" class="form__input" name="edad" id="edad" max="100" min="1" placeholder="78">
+                    <i class="form__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="form__input-error">La edad debe contener hasta 2 disgitos.</p>
+            </div>
 
-            <br><br>
+            <!-- Grupo: Correo Electronico -->
+            <div class="form__grupo" id="form_correo">
+                <label for="correo" class="form__label">Correo Electrónico</label>
+                <div class="form__grupo-input">
+                    <input type="email" class="form__input" name="correo" id="correo" placeholder="rollin_stone@muddy.com">
+                    <i class="form__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="form__input-error">El correo solo debe contener letras, numeros, puntos y guiones.</p>
+            </div>
 
-            <input type="submit" value="Enviar Formulario">
-            <input type="reset" value="Borrar Datos">
+            <!-- Grupo: Comentario -->
+            <div class="form__grupo form_comentario" id="form_comentario">
+                <label for="comentario" class="form__label">Comentario</label>
+                <div class="form__grupo-input">
+                    <textarea class="form__input " name="comentario" id="comentario" placeholder="0 - 500" cols="22" rows="10" maxlength="500"></textarea>
+                    <i class="form__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="form__input-error">El comentario puede tener un máximo de 500 caracteres.</p>
+            </div>
+
+            <!-- Grupo: Terminos -->
+            <div class="form__grupo" id="grupo__terminos">
+                <label class="form__label">
+                    <input class="form__checkbox" type="checkbox" name="terminos" id="terminos">
+                    Acepto los Terminos y Condiciones
+                </label>
+            </div>
+
+            <div class="form__mensaje" id="form__mensaje">
+                <p><i class="fas fa-exclamation-triangle"></i> <b>Error</b> Por favor rellene el formulario correctamente. </p>
+            </div>
+
+            <div class="form__grupo form__grupo-btn-enviar">
+                <button type="submit" class="form__btn">Enviar</button>
+                <p class="form__mensaje-exito" id="form__mensaje-exito">Formulario enviado exitosamente.</p>
+            </div>
 
         </form>
     </main>
@@ -58,6 +101,8 @@
     </footer>
     <!-- FIN FOOTER -->
     
-
+    
+    <script src="js/formulario.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
 </html>

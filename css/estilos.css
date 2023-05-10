@@ -1,0 +1,110 @@
+header div.contenedor {
+  place-content: flex-start;
+}
+
+header div.contenedor nav {
+  width: 70%;
+  display: flex;
+  place-content: space-between;
+}
+
+#menu,
+#menu-check {
+  display: none;
+}
+
+@media only screen and (max-width: 900px) {
+
+  header div.contenedor,
+  header div.contenedor ul,
+  header div.contenedor ul li {
+    display: inline;
+  }
+
+  header div.contemedor nav {
+    width: 100%;
+    display: inline;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  header h1 {
+    margin: 0;
+  }
+
+  header h1 a {
+    padding: 0;
+  }
+
+  header div.contenedor {
+    display: flex;
+    place-content: space-between;
+  }
+
+  #menu-check:not(:checked)~nav {
+    display: none;
+  }
+
+  #menu-check:checked~nav {
+    display: block;
+  }
+
+  #menu {
+    display: block;
+    color: rgb(6, 126, 6);
+    background-color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: 3px solid rgb(6, 126, 6);
+    border-radius: 0.3em;
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+    z-index: 9999;
+  }
+
+  #menu:hover {
+    color: white;
+    background: rgb(6, 126, 6);
+  }
+
+  #menu-cerrar {
+    display: none;
+  }
+
+  #menu-check:checked~label #menu-abrir {
+    display: none;
+  }
+
+  #menu-check:checked~label #menu-cerrar {
+    display: block;
+  }
+
+  header div.contenedor nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: gray;
+    padding-top: 0.5em;
+    padding-right: 1.5em;
+    opacity: 0.8;
+    color: white;
+    font-size: 1.4em;
+  }
+
+  header div.contenedor nav ul a {
+    color: white;
+    background: none;
+  }
+
+  header div.contenedor nav ul,
+  header div.contenedor nav ul li {
+    display: block;
+    text-align: right;
+  }
+
+  main {
+    text-align: center;
+  }
+}
