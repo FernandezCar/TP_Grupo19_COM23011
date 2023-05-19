@@ -1,3 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --color-1: #328532;
+
+  /* Colores de texto */
+  --text-color-1: #000;
+  --text-color-2: #616161;
+  --text-color-3: #fff;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #eddcc1;
+  color: var(--text-color-1);
+  margin: 0;
+  
+}
+
+a {
+  color: var(--text-color-1);
+  text-decoration: none;
+}
+
+a.actual {
+  font-weight: bold;
+}
+
+header {
+  background: #fff;
+  padding: 1em;
+}
+
+header ul a{
+  padding: 1em;
+}
+
+header h1 {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+header h1 > a > span {
+  color: var(--color-1);
+}
+
+header h1 > a {
+  word-spacing: -0.2em;
+}
+
+header div.contenedor ul li {
+  display: inline;
+  font-size: 1.2em;
+  place-content: space-between;
+}
+
+header ul, footer ul {
+  display: flex;
+  place-content: space-between;
+  list-style-type: none;
+  margin-top: 0;
+}
+
+header div.contenedor {
+  display: flex;
+  width: 1080px;
+  margin: 0 auto;
+  place-content: space-between;
+}
+
+
+main p {
+  color: var(--text-color-2);
+  text-align: left;
+  max-width: 34%;
+  padding: 2em;
+  font-weight: bold;
+}
+
+
+#perros {
+  padding: 1em;
+  background: #20272e;
+  margin-top: 0;
+  border-radius:0;
+  display: grid;
+  grid-template-areas:  'area1 . .'
+                        'area2 . .'
+                        'area3 . .';
+  gap: 0.1em;
+}
+
+.contenedor-perro1 {
+  grid-area: area1;
+}
+.contenedor-perro2 {
+  grid-area: area2;
+}
+.contenedor-perro3 {
+  grid-area: area3;
+}
+
+#perros div {
+  margin: 1em;
+  background: #303d49;
+  color: var(--text-color-3);
+  max-width: 40%;
+  border-radius: 1em;
+  box-shadow: 0 0 10px #727272;
+  list-style: none;
+}
+
+#perros img {
+  width: 100%;
+  border-radius: 1em 1em 0 0;
+}
+
+#perros p {
+  color: var(--text-color-3);
+  text-align: center;
+  font-weight: bold;
+}
+
+#gatos {
+  background: var(--color-1);
+  color: var(--text-color-2);
+  padding: 1em;
+  margin-top: 0;
+  border-radius:0;
+  display: grid;
+  grid-template-areas:  'areaG1 . .'
+                        'areaG2 . .'
+                        'areaG3 . .';
+}
+
+.contenedor-gato1 {
+  grid-area: areaG1;
+}
+.contenedor-gato2 {
+  grid-area: areaG2;
+}
+.contenedor-gato3 {
+  grid-area: areaG3;
+}
+
+#gatos div {
+  background: #66e566;
+  margin: 2em;
+  color: var(--text-color-1);
+  max-width: 40%;
+  justify-content: center;
+  border-radius: 1em;
+  box-shadow: 0 0 10px #727272;
+  list-style: none;
+}
+
+#gatos p{
+  color: var(--text-color-1);
+  text-align: center;
+  font-weight: bold;
+}
+
+#gatos img {
+  max-width: 100%;
+  border-radius: 1em 1em 0 0;
+}
+
+#gatos ul {
+  margin-top: 0;
+  margin-bottom: 0; 
+}
+
+footer {
+  background: var(--color-1);
+  color: var(--text-color-3);
+}
+footer a, li {
+  color: var(--text-color-3);
+}
+footer ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 header div.contenedor {
   place-content: flex-start;
 }
@@ -13,7 +197,10 @@ header div.contenedor nav {
   display: none;
 }
 
-@media only screen and (max-width: 900px) {
+/* responsive tres cortes |600px|768px|1200px|  */
+
+
+@media only screen and (max-width: 768px) {
 
   header div.contenedor,
   header div.contenedor ul,
@@ -25,9 +212,11 @@ header div.contenedor nav {
     width: 100%;
     display: inline;
   }
+
+
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 450px) {
   header h1 {
     margin: 0;
   }
