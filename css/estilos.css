@@ -337,7 +337,7 @@ header div.contenedor nav {
   }
 
   main {
-    max-width: 90%;
+    max-width: 100%;
     text-align: center;
     display: grid;
     grid-template-columns: 1fr;
@@ -350,8 +350,9 @@ header div.contenedor nav {
   }
 
   #perros {
-    max-width: 90%;
+    max-width: 100%;
     display: grid;
+    grid-template-columns: 1fr;
     grid-template-areas:  'area1'
                           'area2'
                           'area3';
@@ -361,8 +362,9 @@ header div.contenedor nav {
   }
 
   #gatos {
-    max-width: 90%;
+    max-width: 100%;
     display: grid;
+    grid-template-columns: 1fr;
     grid-template-areas:  'areaG1'
                           'areaG2'
                           'areaG3';
