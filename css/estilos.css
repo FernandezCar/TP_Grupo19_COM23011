@@ -14,7 +14,7 @@ body {
   background: #eddcc1;
   color: var(--text-color-1);
   margin: 0;
-  
+  display: grid;
 }
 
 a {
@@ -84,10 +84,10 @@ main p {
   margin-top: 0;
   border-radius:0;
   display: grid;
-  grid-template-areas:  'area1 . .'
-                        'area2 . .'
-                        'area3 . .';
-  gap: 0.1em;
+  grid-template-areas:  'area1'
+                        'area2'
+                        'area3';
+  /* gap: 0.1em; */
 }
 
 .contenedor-perro1 {
@@ -99,6 +99,7 @@ main p {
 .contenedor-perro3 {
   grid-area: area3;
 }
+.menu { grid-area: menu1;}
 
 #perros div {
   margin: 1em;
@@ -197,7 +198,7 @@ header div.contenedor nav {
   display: none;
 }
 
-/* responsive tres cortes |600px|768px|1200px|  */
+/* responsive tres cortes |450px|768px|  */
 
 
 @media only screen and (max-width: 768px) {
@@ -206,6 +207,8 @@ header div.contenedor nav {
   header div.contenedor ul,
   header div.contenedor ul li {
     display: inline;
+    width: 90%;
+    
   }
 
   header div.contemedor nav {
@@ -213,10 +216,49 @@ header div.contenedor nav {
     display: inline;
   }
 
+  main {
+    max-width: 100%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'menu1 .';
+  }
+
+  main div p {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  #perros {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:  'area1 .'
+                          'area2 .'
+                          'area3 .';
+  }
+  #perros div {
+    max-width: 100%;
+  }
+
+  #gatos {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:  'areaG1 .'
+                          'areaG2 .'
+                          'areaG3 .';
+  }
+  #gatos div {
+    max-width: 100%;
+  }
 
 }
 
 @media only screen and (max-width: 450px) {
+  body {
+    width: 100%;
+  }
   header h1 {
     margin: 0;
   }
@@ -228,6 +270,7 @@ header div.contenedor nav {
   header div.contenedor {
     display: flex;
     place-content: space-between;
+    width: 90%;
   }
 
   #menu-check:not(:checked)~nav {
@@ -294,6 +337,37 @@ header div.contenedor nav {
   }
 
   main {
+    max-width: 90%;
     text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'menu1';
+  }
+
+  main div p {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  #perros {
+    max-width: 90%;
+    display: grid;
+    grid-template-areas:  'area1'
+                          'area2'
+                          'area3';
+  }
+  #perros div {
+    max-width: 90%;
+  }
+
+  #gatos {
+    max-width: 90%;
+    display: grid;
+    grid-template-areas:  'areaG1'
+                          'areaG2'
+                          'areaG3';
+  }
+  #gatos div {
+    max-width: 90%;
   }
 }
