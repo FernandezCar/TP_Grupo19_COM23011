@@ -1,18 +1,28 @@
+window.addEventListener('load', function () {
+    var imageContainer = document.getElementById('imageContainer');
+    var images = [
+        'imagenes/carrousel/carrousel-01.jpg',
+        'imagenes/carrousel/carrousel-02.jpg',
+        'imagenes/carrousel/carrousel-03.jpg',
+        'imagenes/carrousel/carrousel-04.jpg',
+        'imagenes/carrousel/carrousel-05.jpg',
+        'imagenes/carrousel/carrousel-06.jpg',
+        'imagenes/carrousel/carrousel-07.jpg'
+    ];
+    var currentIndex = 0;
+    var duration = 3000; // Duración de cada imagen (3 segundos)
 
-const carrousel_interno =   document.querySelector('.carrousel_interno')
-const punto =               document.querySelectorAll('.punto')
+    function showNextImage() {
+        // Calcula el índice de la siguiente imagen
+        currentIndex = (currentIndex + 1) % images.length;
 
-punto.forEach( (cadaPunto, i ) => {
-    punto[i].addEventListener('click',()=>{
+        // Establece la imagen como fondo del contenedor
+        imageContainer.style.backgroundImage = `url('${images[currentIndex]}')`;
+    }
 
-        let posicion = i
-        let operacion = posicion * -16.6
+    // Cambia automáticamente las imágenes cada cierto tiempo
+    setInterval(showNextImage, duration);
 
-        carrousel_interno.style.transform = `translateX(${ operacion }%)`
-
-        punto.forEach( ( cadaPunto , i) =>{
-            punto[i].classList.remove('activo')
-        })
-        punto[i].classList.add('activo')
-    })
+    // Muestra la primera imagen al cargar la página
+    imageContainer.style.backgroundImage = `url('${images[currentIndex]}')`;
 });

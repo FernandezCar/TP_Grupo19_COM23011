@@ -68,15 +68,33 @@ header div.contenedor {
   place-content: space-between;
 }
 
+main {
+  padding: 1em;
+  margin: 3.5em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:  'menu1 imagine1'
+                        '. imagine1';
+}
 
 main p {
   color: var(--text-color-2);
-  text-align: left;
-  max-width: 34%;
+  text-align: center;
+  max-width: 90%;
   padding: 2em;
   font-weight: bold;
 }
 
+#imageContainer {
+  background: #eddcc1;
+  width: 100%;
+  height: 100%;
+  border-radius: 1em;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s;
+}
 
 #perros {
   padding: 1em;
@@ -84,28 +102,29 @@ main p {
   margin-top: 0;
   border-radius:0;
   display: grid;
-  grid-template-areas:  'area1'
-                        'area2'
-                        'area3';
-  /* gap: 0.1em; */
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:  'area1 area4'
+                        'area2 area4'
+                        'area3 area4';
 }
 
-.contenedor-perro1 {
-  grid-area: area1;
-}
-.contenedor-perro2 {
-  grid-area: area2;
-}
-.contenedor-perro3 {
-  grid-area: area3;
-}
+.contenedor-perro1 { grid-area: area1;}
+.contenedor-perro2 { grid-area: area2;}
+.contenedor-perro3 { grid-area: area3;}
+.image-items { grid-area: area4;}
+.image-items2 { grid-area: area5;}
 .menu { grid-area: menu1;}
+.imagine { grid-area: imagine1;}
+.f01 { grid-area: foo01;}
+.f02 { grid-area: foo02;}
+.f03 { grid-area: foo03;}
 
 #perros div {
   margin: 1em;
   background: #303d49;
   color: var(--text-color-3);
-  max-width: 40%;
+  max-width: 90%;
   border-radius: 1em;
   box-shadow: 0 0 10px #727272;
   list-style: none;
@@ -122,6 +141,17 @@ main p {
   font-weight: bold;
 }
 
+.image-items {
+  width: auto;
+  position: relative;
+  background-color: #20272e;
+}
+
+.image-items2{
+  display: none;
+}
+
+
 #gatos {
   background: var(--color-1);
   color: var(--text-color-2);
@@ -129,26 +159,24 @@ main p {
   margin-top: 0;
   border-radius:0;
   display: grid;
-  grid-template-areas:  'areaG1 . .'
-                        'areaG2 . .'
-                        'areaG3 . .';
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:  'areaG1 areaG4'
+                        'areaG2 areaG4'
+                        'areaG3 areaG4';
 }
 
-.contenedor-gato1 {
-  grid-area: areaG1;
-}
-.contenedor-gato2 {
-  grid-area: areaG2;
-}
-.contenedor-gato3 {
-  grid-area: areaG3;
-}
+.contenedor-gato1 { grid-area: areaG1;}
+.contenedor-gato2 { grid-area: areaG2;}
+.contenedor-gato3 { grid-area: areaG3;}
+.image-itemsG     { grid-area: areaG4;}
+.image-itemsG2    { grid-area: areaG5;}
 
 #gatos div {
   background: #66e566;
-  margin: 2em;
+  margin: 1em;
   color: var(--text-color-1);
-  max-width: 40%;
+  max-width: 90%;
   justify-content: center;
   border-radius: 1em;
   box-shadow: 0 0 10px #727272;
@@ -169,6 +197,16 @@ main p {
 #gatos ul {
   margin-top: 0;
   margin-bottom: 0; 
+}
+
+.image-itemsG {
+  width: auto;
+  position: relative;
+  background-color: var(--color-1); 
+}
+
+.image-itemsG2{
+  display: none;
 }
 
 footer {
@@ -204,12 +242,11 @@ header div.contenedor nav {
 @media only screen and (max-width: 768px) {
 
   header div.contenedor,
-  header div.contenedor ul,
-  header div.contenedor ul li {
+  header div.contenedor ul {
     display: inline;
-    width: 90%;
-    
+    width: 100%;
   }
+
 
   header div.contemedor nav {
     width: 100%;
@@ -221,7 +258,7 @@ header div.contenedor nav {
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'menu1 .';
+    grid-template-areas: 'menu1 imagine1';
   }
 
   main div p {
@@ -233,21 +270,30 @@ header div.contenedor nav {
     max-width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas:  'area1 .'
-                          'area2 .'
-                          'area3 .';
+    grid-template-areas:  'area1 area4'
+                          'area2 area4'
+                          'area3 area5';
   }
   #perros div {
     max-width: 100%;
+  }
+
+  .image-items, .image-itemsG {
+    width: auto;
+  }
+
+  .image-items2, .image-itemsG2 {
+    display: block;
+    width: auto;
   }
 
   #gatos {
     max-width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas:  'areaG1 .'
-                          'areaG2 .'
-                          'areaG3 .';
+    grid-template-areas:  'areaG1 areaG4'
+                          'areaG2 areaG4'
+                          'areaG3 areaG5';
   }
   #gatos div {
     max-width: 100%;
@@ -341,7 +387,9 @@ header div.contenedor nav {
     text-align: center;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: 'menu1';
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 'menu1' 
+                        'imagine1';
   }
 
   main div p {
@@ -372,4 +420,22 @@ header div.contenedor nav {
   #gatos div {
     max-width: 90%;
   }
+
+  .image-items, .image-itemsG {
+    display: none;
+  }
+
+  .image-items2, .image-itemsG2 {
+    display: none;
+  }
+
+  footer ul {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:  'foo01'
+                          'foo02'
+                          'foo03';
+  }
+
 }
