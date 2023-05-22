@@ -9,6 +9,8 @@
   --text-color-3: #fff;
 }
 
+
+
 body {
   font-family: 'Poppins', sans-serif;
   background: #eddcc1;
@@ -75,7 +77,7 @@ main {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:  'menu1 imagine1'
-                        '. imagine1';
+  '. imagine1';
 }
 
 main p {
@@ -105,8 +107,8 @@ main p {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas:  'area1 area4'
-                        'area2 area4'
-                        'area3 area4';
+  'area2 area4'
+  'area3 area4';
 }
 
 .contenedor-perro1 { grid-area: area1;}
@@ -162,8 +164,8 @@ main p {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas:  'areaG1 areaG4'
-                        'areaG2 areaG4'
-                        'areaG3 areaG4';
+  'areaG2 areaG4'
+  'areaG3 areaG4';
 }
 
 .contenedor-gato1 { grid-area: areaG1;}
@@ -207,6 +209,38 @@ main p {
 
 .image-itemsG2{
   display: none;
+}
+
+.razaG { grid-area: razaG1;}
+.razaP { grid-area: razaP1;}
+
+.razas{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'razaG1 razaP1';
+}
+
+.razaG, .razaP {
+  text-align: center;
+  color: var(--text-color-1);
+  font-weight: bold;
+}
+
+.razaG a, .razaP a {
+  color: blue;
+  text-decoration: underline;
+}
+#breed-select, #breed-p-select {
+  margin-bottom: 1em;
+  background: var(--text-color-3);
+  border-radius: 1em;
+  max-width: 200px;
+  height: 2em;
+}
+#breed-image, #breed-p-image {
+  border-radius: 1em;
+  max-width: 90%;
+  margin-bottom: 1em;
 }
 
 footer {
@@ -427,6 +461,37 @@ header div.contenedor nav {
 
   .image-items2, .image-itemsG2 {
     display: none;
+  }
+
+  .razas{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:  'razaG1' 
+                          'razaP1';
+  }
+
+  .razaG, .razaP {
+    text-align: center;
+    color: var(--text-color-1);
+    font-weight: bold;
+  }
+  
+  .razaG a, .razaP a {
+    color: blue;
+    text-decoration: underline;
+  }
+  #breed-select, #breed-p-select {
+    margin-bottom: 1em;
+    background: var(--text-color-3);
+    border-radius: 1em;
+    max-width: auto;
+    height: 2em;
+  }
+  #breed-image, #breed-p-image {
+    border-radius: 1em;
+    max-width: 90%;
+    margin-bottom: auto;
   }
 
   footer ul {

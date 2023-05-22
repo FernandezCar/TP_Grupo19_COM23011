@@ -181,26 +181,22 @@
     </aside>
     <!-- Fin Section gatos -->
 
-
-
-    <div id="banner-message">
-        <p>Select a Breed</p>
-
-        <select class="breed_select">
-            <option></option>
-        </select>
-
-    </div>
-    <div id="breed_data">
-        <img id="breed_image" src="" />
-        <p>
-            Breed Data
-        </p>
-        <table id="breed_data_table">
-
-        </table>
-    </div>
-
+    <!-- Comienzo section Razas -->
+    <aside class="razas" id="razas">
+        <section class="razaG">
+            <h3>Selecciona una raza de gato:</h3>
+            <select id="breed-select"></select><br>
+            <img id="breed-image" src="" alt="">
+            <p id="breed-info"></p>
+        </section>
+        <!-- ......................................... -->
+        <section class="razaP">
+            <h3>Selecciona una raza de Perros:</h3>
+            <select id="breed-p-select"></select><br>
+            <img id="breed-p-image" src="" alt="">
+            <p id="breed-p-info"></p>
+        </section>
+    </aside>
     <!-- Fin Section razas -->
     <footer>
         <ul>
@@ -212,7 +208,7 @@
     <!-- FIN FOOTER -->
 
     <script src="js/script.js"></script>
-    <!-- <script src="js/api.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js"></script> -->
 </body>
 
 </html>
