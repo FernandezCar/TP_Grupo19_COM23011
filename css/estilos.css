@@ -88,6 +88,11 @@ main p {
   font-weight: bold;
 }
 
+.fa-solid {
+  font-size: 4em;
+  text-align: center;
+}
+
 #imageContainer {
   background: #eddcc1;
   width: 100%;
@@ -289,14 +294,20 @@ header div.contenedor nav {
 
   main {
     max-width: 100%;
+    max-height: 60vh;
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 'menu1 imagine1';
   }
-
+  
   main div p {
     max-width: 90%;
+    text-align: center;
+  }
+
+  .fa-solid {
+    font-size: 2em;
     text-align: center;
   }
 
@@ -429,6 +440,12 @@ header div.contenedor nav {
   main div p {
     max-width: 90%;
     text-align: center;
+  }
+
+  .fa-solid {
+    position: absolute;
+    margin-left: 30%;
+    font-size: 2em;
   }
 
   #perros {
